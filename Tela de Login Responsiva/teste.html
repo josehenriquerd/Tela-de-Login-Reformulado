@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="teste.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <h1>Crie a sua conta!</h1>
+          <span>Insira seu novo Usuário e sua nova senha</span>
+          <input
+            type="text"
+            name="usuario"
+            id="newusuario"
+            class="texto"
+            placeholder="Insira o Usuário"
+          />
+          <input
+            type="password"
+            name="senha"
+            id="newsenha"
+            class="texto"
+            placeholder="Nova Senha"
+          />
+          <input
+            type="password"
+            name="repita a sua senha"
+            id="rptsenha"
+            class="texto"
+            placeholder="Repita a Senha"
+          />
+          <button>Registrar</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h1>login</h1>
+          <br />
+          <span>Insira o Usuário e sua Senha</span>
+          <input
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="Insira o Usuário"
+          />
+          <input
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="Senha"
+          /><br />
+
+          <button type="button" value="btn" id="btn" onclick="Login()">
+            Login
+          </button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Como vai?</h1>
+            <p>Já se Registrou? Agora é so Logar.</p>
+            <button class="ghost" id="signIn">Login</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Olá, bem vindo!</h1>
+            <p>Caso seja a sua primeira vez, vamos se Registrar.</p>
+            <button class="ghost" id="signUp">Registrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const signUpButton = document.getElementById("signUp");
+      const signInButton = document.getElementById("signIn");
+      const container = document.getElementById("container");
+
+      signUpButton.addEventListener("click", () => {
+        container.classList.add("right-panel-active");
+      });
+
+      signInButton.addEventListener("click", () => {
+        container.classList.remove("right-panel-active");
+      });
+    </script>
+    <script src="teste.js"></script>
+  </body>
+</html>
